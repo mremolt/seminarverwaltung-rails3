@@ -10,10 +10,15 @@ gem 'mysql2'
 gem 'inherited_resources'
 gem 'responders'
 gem 'has_scope'
-gem 'will_paginate', '3.0.pre'
+gem 'will_paginate', '>= 3.0.pre'
 gem 'scoped_search'
-gem 'tabletastic'
+gem 'tabletastic', '>= 0.2.0.pre4'
 gem 'rails3-generators'
+gem 'simple_form'
+
+gem 'rspec-rails', '>= 2.0.0.beta.17'
+gem 'factory_girl_rails'
+gem 'shoulda'
 
 # Use unicorn as the web server
 # gem 'unicorn'
