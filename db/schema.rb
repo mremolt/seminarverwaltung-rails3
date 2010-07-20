@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20100719185115) do
   create_table "seminars", :force => true do |t|
     t.string   "titel"
     t.text     "beschreibung"
-    t.decimal  "preis",        :precision => 10, :scale => 0
+    t.decimal  "preis",        :precision => 10, :scale => 2
     t.string   "kategorie"
     t.datetime "created_at"
     t.datetime "updated_at"

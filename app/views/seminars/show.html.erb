@@ -1,5 +1,9 @@
-<p id="notice"><%= notice %></p>
-
+<% show_for @seminar do |o| %>
+  <%= o.attribute :titel %>
+  <%= o.attribute :beschreibung %>
+  <%= o.attribute :preis %>
+  <%= o.attribute :kategorie %>
+<% end %>
 
 <%= link_to 'Edit', edit_seminar_path(@seminar) %> |
 <%= link_to 'Back', seminars_path %>

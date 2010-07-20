@@ -1,9 +1,16 @@
-<%= simple_form_for @seminar do |f| %>
-  <%= f.input :titel %>
-  <%= f.input :beschreibung %>
-  <%= f.input :preis %>
-  <%= f.input :kategorie %>
+<% semantic_form_for @seminar do |f| %>
 
-  <%= f.button :submit %>
+  <% f.inputs "Allgemein" do %>
+    <%= f.input :titel, :label => 'Titel' %>
+    <%= f.input :preis, :label => 'Preis' %>
+    <%= f.input :kategorie, :label => 'Kategorie' %>
+  <% end %>
+
+  <% f.inputs "Beschreibung" do %>
+    <%= f.input :beschreibung, :label => 'Beschreibung' %>
+  <% end %>
+
+  <%= f.buttons %>
+
 <% end %>
 

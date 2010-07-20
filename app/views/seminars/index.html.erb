@@ -4,7 +4,6 @@
   t.data :actions => :all
 end %>
 
-
-<br />
+<%= will_paginate @posts %>
 
 <%= link_to 'New Seminar', new_seminar_path %>

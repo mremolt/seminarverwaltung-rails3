@@ -3,7 +3,7 @@ class CreateSeminars < ActiveRecord::Migration
     create_table :seminars do |t|
       t.string :titel
       t.text :beschreibung
-      t.decimal :preis, :scale => 2
+      t.decimal :preis, :precision => 10, :scale => 2
       t.string :kategorie
 
       t.timestamps

@@ -14,7 +14,9 @@ gem 'will_paginate', '>= 3.0.pre'
 gem 'scoped_search'
 gem 'tabletastic', '>= 0.2.0.pre4'
 gem 'rails3-generators'
-gem 'simple_form'
+gem 'formtastic',
+  :git => 'http://github.com/justinfrench/formtastic.git', :branch => 'rails3'
+gem 'show_for'
 
 gem 'rspec-rails', '>= 2.0.0.beta.17'
 gem 'factory_girl_rails'
