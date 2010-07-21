@@ -18,9 +18,19 @@ gem 'formtastic',
   :git => 'http://github.com/justinfrench/formtastic.git', :branch => 'rails3'
 gem 'show_for'
 
-gem 'rspec-rails', '>= 2.0.0.beta.17'
 gem 'factory_girl_rails'
-gem 'shoulda'
+
+group :development do
+  gem 'rspec-rails', '>= 2.0.0.beta.17'
+  gem 'shoulda'
+  gem 'unicorn'
+end
+
+group :test do
+  gem 'rspec-rails', '>= 2.0.0.beta.17'
+  gem 'shoulda'
+end
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
