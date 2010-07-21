@@ -31,7 +31,8 @@ test:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: seminarverwaltung_rails3_test
+  database: seminarverwaltung_rails3_test<%= ENV['TEST_ENV_NUMBER'] %>
+
   pool: 5
   username: root
   password:
