@@ -17,6 +17,7 @@ gem 'rails3-generators'
 gem 'formtastic',
   :git => 'http://github.com/justinfrench/formtastic.git', :branch => 'rails3'
 gem 'show_for'
+gem "friendly_id", "~> 3.0"
 
 gem 'factory_girl_rails'
 

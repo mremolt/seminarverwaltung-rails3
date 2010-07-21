@@ -38,6 +38,9 @@ doc:plugins
 doc:rails
 doc:reapp
 doc:rerails
+friendly_id:make_slugs
+friendly_id:redo_slugs
+friendly_id:remove_old_slugs
 log:clear
 middleware
 notes
@@ -57,6 +60,15 @@ rails:update:javascripts
 rails:update:scripts
 routes
 secret
+spec
+spec:controllers
+spec:helpers
+spec:lib
+spec:mailers
+spec:models
+spec:requests
+spec:routing
+spec:views
 stats
 test
 test:benchmark

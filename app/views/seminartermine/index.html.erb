@@ -1,7 +1,12 @@
-<h1>Listing seminartermine</h1>
+<h2>Listing seminartermine</h2>
 
 <%= table_for(@seminartermine) do |t|
-  t.data :actions => :all
+  t.data :actions => :all do
+    t.data :beginn, :ende, :raum, :slug
+    t.cell :seminar do |s|
+      link_to s.seminar, edit_seminar_path(s.seminar)
+    end
+  end
 end %>
 
 <%= will_paginate @seminartermine %>
