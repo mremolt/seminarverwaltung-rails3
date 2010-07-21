@@ -28,11 +28,17 @@
         <ul>
           <li><%= link_to "Seminare", seminars_path %></li>
           <li><%= link_to "Seminartermine", seminartermine_path %></li>
+          <li><%= link_to "Benutzer", :controller => 'benutzer', :action => 'index' %></li>
+          <li><%= link_to "Teilnahmen", teilnahmen_path %></li>
         </ul>
       </div>
 
       <div id="content" class="span-20 last">
         <%= yield %>
+      </div>
+
+      <div id="header" class="span-24 last">
+        <p>Das Ende</p>
       </div>
 
     </div>

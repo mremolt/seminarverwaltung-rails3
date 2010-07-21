@@ -1,13 +1,6 @@
 <h2>Listing seminartermine</h2>
 
-<%= table_for(@seminartermine) do |t|
-  t.data :actions => :all do
-    t.data :beginn, :ende, :raum, :slug
-    t.cell :seminar do |s|
-      link_to s.seminar, edit_seminar_path(s.seminar)
-    end
-  end
-end %>
+<%= render :partial => 'tabelle', :locals => {:seminartermine => @seminartermine} %>
 
 <%= will_paginate @seminartermine %>
 

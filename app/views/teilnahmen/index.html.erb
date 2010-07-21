@@ -1,0 +1,10 @@
+<h1>Listing teilnahmen</h1>
+
+<%= table_for @teilnahmen do |t|
+  t.data :actions => :all do
+    t.data :seminar, :beginn, :ende, :raum
+    t.cell(:benutzer) {|t| t.benutzer.to_s }
+  end
+end %>
+
+<%= link_to 'New Teilnahme', new_teilnahme_path %>

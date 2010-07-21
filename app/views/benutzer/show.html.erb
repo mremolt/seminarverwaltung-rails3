@@ -1,0 +1,9 @@
+<% show_for @benutzer do |o| %>
+  <%= o.attribute :anrede %>
+  <%= o.attribute :vorname %>
+  <%= o.attribute :name %>
+  <%= o.attribute :email %>
+<% end %>
+
+<%= link_to 'Edit', edit_benutzer_path(@benutzer) %> |
+<%= link_to 'Back', :action => 'index' %>

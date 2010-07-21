@@ -1,0 +1,11 @@
+<h1>Listing benutzer</h1>
+
+<%= table_for @benutzer do |t|
+  t.data :actions => :all do
+    t.data :anrede, :vorname, :name, :email
+  end
+end %>
+
+<%= will_paginate @benutzer %>
+
+<%= link_to 'New Benutzer', new_benutzer_path %>

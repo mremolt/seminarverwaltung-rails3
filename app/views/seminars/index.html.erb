@@ -1,7 +1,7 @@
 <h2>Listing seminars</h2>
 
 <%= table_for @seminars do |t|
-  t.data :titel, :slug, :preis, :kategorie, :actions => :all do
+  t.data :actions => :all do
     t.data :titel, :cached_slug, :preis, :kategorie
     t.cell(:seminartermine) do |s|
       link_to "Seminartermine (#{s.seminartermine_count})", :controller => 'seminartermine',

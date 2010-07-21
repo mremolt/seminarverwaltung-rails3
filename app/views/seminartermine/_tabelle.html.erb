@@ -1,0 +1,12 @@
+<%= table_for(@seminartermine) do |t|
+  t.data :actions => :all do
+    t.data :beginn, :ende, :raum
+    t.cell :seminar do |s|
+      link_to s.seminar, edit_seminar_path(s.seminar)
+    end
+
+    t.cell :teilnehmer do |s|
+      raw(s.teilnehmer.collect {|t| link_to t.to_s, edit_benutzer_path(t) }.join('<br />'))
+    end
+  end
+end %>

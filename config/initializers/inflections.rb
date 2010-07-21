@@ -11,4 +11,6 @@
 
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'seminartermin', 'seminartermine'
+  inflect.irregular 'teilnahme', 'teilnahmen'
+  inflect.uncountable %w( benutzer )
 end

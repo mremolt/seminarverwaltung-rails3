@@ -1,0 +1,7 @@
+<% show_for @teilnahme do |o| %>
+  <%= o.association :seminartermin %>
+  <%= o.association :benutzer %>
+<% end %>
+
+<%= link_to 'Edit', edit_teilnahme_path(@teilnahme) %> |
+<%= link_to 'Back', teilnahmen_path %>

@@ -1,6 +1,7 @@
 class SeminartermineController < InheritedResources::Base
   optional_belongs_to :seminar
   respond_to :json, :only => [:index, :show]
+  respond_to :js, :only => :index
 
   private
   def collection

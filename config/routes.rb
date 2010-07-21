@@ -1,4 +1,8 @@
 SeminarverwaltungRails3::Application.routes.draw do |map|
+  resources :teilnahmen
+
+  resources :benutzer
+
 
   resources :seminars do
     resources :seminartermine
