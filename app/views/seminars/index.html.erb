@@ -1,9 +1,9 @@
 <h1>Listing seminars</h1>
 
-<%= table_for(@seminars) do |t|
+<%= table_for @seminars do |t|
   t.data :actions => :all
 end %>
 
-<%= will_paginate @posts %>
+<%= will_paginate @seminars %>
 
 <%= link_to 'New Seminar', new_seminar_path %>

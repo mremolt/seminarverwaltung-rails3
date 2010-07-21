@@ -1,0 +1,10 @@
+<% semantic_form_for @seminartermin do |f| %>
+  <% f.inputs do %>
+    <%= f.input :seminar, :label => 'Seminar' %>
+    <%= f.input :beginn, :label => 'Beginn' %>
+    <%= f.input :ende, :label => 'Ende' %>
+    <%= f.input :raum, :label => 'Raum' %>
+  <% end %>
+
+<%= f.buttons %>
+<% end %>

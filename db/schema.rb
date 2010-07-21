@@ -9,13 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100719185115) do
+ActiveRecord::Schema.define(:version => 20100720170912) do
 
   create_table "seminars", :force => true do |t|
     t.string   "titel"
     t.text     "beschreibung"
     t.decimal  "preis",        :precision => 10, :scale => 2
     t.string   "kategorie"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "seminartermine", :force => true do |t|
+    t.date     "beginn"
+    t.date     "ende"
+    t.string   "raum"
+    t.integer  "seminar_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

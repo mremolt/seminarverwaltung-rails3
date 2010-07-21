@@ -1,0 +1,9 @@
+<% show_for @seminartermin do |o| %>
+  <%= o.attribute :beginn %>
+  <%= o.attribute :ende %>
+  <%= o.attribute :raum %>
+  <%= o.association :seminar %>
+<% end %>
+
+<%= link_to 'Edit', edit_seminartermin_path(@seminartermin) %> |
+<%= link_to 'Back', seminartermine_path %>

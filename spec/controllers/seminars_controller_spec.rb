@@ -8,9 +8,9 @@ describe SeminarsController do
 
   describe "GET index" do
     it "assigns all seminars as @seminars" do
-      Seminar.stub(:all) { [mock_seminar] }
+      seminar = Factory :seminar
       get :index
-      assigns(:seminars).should eq([mock_seminar])
+      assigns(:seminars).should eq([seminar])
     end
   end
 

@@ -1,0 +1,2 @@
+module SeminartermineHelper
+end

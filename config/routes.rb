@@ -1,4 +1,12 @@
 SeminarverwaltungRails3::Application.routes.draw do |map|
+
+  resources :seminars do
+    resources :seminartermine
+  end
+  
+  resources :seminartermine
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -10,8 +18,7 @@ SeminarverwaltungRails3::Application.routes.draw do |map|
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  resources :seminars
+  # Sample resource route (maps HTTP verbs to controller actions automatically)
 
   # Sample resource route with options:
   #   resources :products do
