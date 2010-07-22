@@ -1,4 +1,4 @@
-class AddSeminartetmineCountToSeminars < ActiveRecord::Migration
+class AddSeminartermineCountToSeminars < ActiveRecord::Migration
   def self.up
     add_column :seminars, :seminartermine_count, :integer
   end
