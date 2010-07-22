@@ -1,5 +1,7 @@
 <h2>Listing seminartermine</h2>
 
+<%= render :partial => '/search' %>
+
 <%= render :partial => 'tabelle', :locals => {:seminartermine => @seminartermine} %>
 
 <%= will_paginate @seminartermine %>

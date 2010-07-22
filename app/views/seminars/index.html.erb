@@ -1,11 +1,14 @@
 <h2>Listing seminars</h2>
 
+<%= render :partial => '/search' %>
+
 <%= table_for @seminars do |t|
   t.data :actions => :all do
     t.data :titel, :cached_slug, :preis, :kategorie
     t.cell(:seminartermine) do |s|
-      link_to "Seminartermine (#{s.seminartermine_count})", :controller => 'seminartermine',
-        :action => 'index', :seminar_id => s.cached_slug unless s.seminartermine.blank?
+      link_text = raw((s.seminartermine.collect {|st| "#{st.beginn} - #{st.ende}"}).join(',<br />'))
+      link_to link_text, :controller => 'seminartermine', :action => 'index',
+        :seminar_id => s.cached_slug unless s.seminartermine.blank?
     end
   end
 end %>

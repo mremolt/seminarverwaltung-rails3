@@ -18,6 +18,7 @@ gem 'formtastic',
   :git => 'http://github.com/justinfrench/formtastic.git', :branch => 'rails3'
 gem 'show_for'
 gem "friendly_id", "~> 3.0"
+gem "scoped_search"
 
 gem 'factory_girl_rails'
 

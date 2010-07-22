@@ -4,6 +4,9 @@ class Seminar < ActiveRecord::Base
 
   has_many :seminartermine
 
+  searchable_on :titel, :beschreibung, :preis, :kategorie,
+    :seminartermine_raum, :seminartermine_beginn, :seminartermine_ende
+
   default_scope :include => :seminartermine 
 
   validates_presence_of :titel, :preis

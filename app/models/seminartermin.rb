@@ -6,6 +6,10 @@ class Seminartermin < ActiveRecord::Base
   has_many :teilnahmen
   has_many :teilnehmer, :through => :teilnahmen, :source => :benutzer, :class_name => "Benutzer"
 
+  searchable_on :beginn, :ende, :raum, :teilnehmer_vorname, :teilnehmer_name, 
+    :teilnehmer_email, :seminar_titel, :seminar_beschreibung, :seminar_kategorie,
+    :seminar_preis
+
   default_scope :include => [:seminar, :teilnehmer]
 
   def description

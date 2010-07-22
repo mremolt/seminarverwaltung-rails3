@@ -3,6 +3,8 @@ class SeminartermineController < InheritedResources::Base
   respond_to :json, :only => [:index, :show]
   respond_to :js, :only => :index
 
+  has_scope :search_for
+
   private
   def collection
     @seminartermine ||= end_of_association_chain.paginate(
